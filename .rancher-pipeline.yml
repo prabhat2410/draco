@@ -5,8 +5,7 @@ stages:
       dockerfilePath: nifi-ngsi-resources/docker/Dockerfile
       buildContext: .
       tag: draco
-      pushRemote: true
-      registry: 192.168.100.178:5000
+      registry: ceph-admin:5000
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
