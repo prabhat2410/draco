@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: nifi-ngsi-resources/docker/Dockerfile
       buildContext: .
-      tag: draco
+      tag: draco-devops
       pushRemote: true
       registry: 192.168.100.178:5000
 timeout: 60
