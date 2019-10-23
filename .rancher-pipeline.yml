@@ -10,6 +10,6 @@ stages:
       env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
-      PLUGIN_STORAGE_PATH: /var/lib/docker2
+      PLUGIN_STORAGE_PATH: /var/lib/docker/2
 timeout: 60
 notification: {}
