@@ -1,0 +1,11 @@
+stages:
+- name: Build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: nifi-ngsi-resources/docker/Dockerfile
+      buildContext: .
+      tag: draco
+      pushRemote: true
+      registry: ceph-admin:5000
+timeout: 60
+notification: {}
