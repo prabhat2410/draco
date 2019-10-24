@@ -21,7 +21,7 @@ ENV NIFI_LOG_DIR=${NIFI_HOME}/logs
 ENV DRACO_RELEASE=1.3.1
 ENV NIFI_NGSI_NAR_VERSION=1.3.1
 
-ADD sh/ ${NIFI_BASE_DIR}/scripts/
+COPY sh/ ${NIFI_BASE_DIR}/scripts/
 
 # Setup NiFi user and create necessary directories
 # change uid and gid for elasticsearch user
