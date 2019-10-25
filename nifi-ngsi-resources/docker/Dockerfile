@@ -32,7 +32,7 @@ ENV NIFI_PID_DIR=${NIFI_HOME}/run
 ENV NIFI_LOG_DIR=${NIFI_HOME}/logs
 ENV NIFI_LIB_DIR=${NIFI_HOME}/lib
 # Added directory for executing start.sh file
-ADD sh/ ${NIFI_BASE_DIR}/scripts/
+ADD /nifi-ngsi-resources/docker/sh/ ${NIFI_BASE_DIR}/scripts/
 
 
 # Setup NiFi user and create necessary directories
