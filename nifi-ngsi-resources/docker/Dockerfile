@@ -50,7 +50,7 @@ RUN groupadd -g ${GID} nifi || groupmod -n nifi `getent group ${GID} | cut -d: -
     && apt-get install -y jq xmlstarlet procps
 
 # Added file for adding Draco's functionality
-ADD /nifi-ngsi-bundle/nifi-ngsi-nar-1.1.0.nar ${NIFI_LIB_DIR}
+ADD /nifi-ngsi-bundle/nifi-ngsi-nar-1.1.0.nar/ ${NIFI_LIB_DIR}
 
 USER nifi
 
