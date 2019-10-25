@@ -1,4 +1,3 @@
-
 FROM openjdk:8u191-jre-alpine3.9
 LABEL maintainer="Andrés Muñoz<joseandres.munoz@upm.es>"
 LABEL site="https://github.com/ging/fiware-draco"
