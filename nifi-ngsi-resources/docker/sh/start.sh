@@ -20,7 +20,7 @@ scripts_dir='/opt/nifi/scripts'
 [ -f "${scripts_dir}/common.sh" ] && . "${scripts_dir}/common.sh"
 
 # Establish baseline properties
-prop_replace 'nifi.web.http.port'               "${NIFI_WEB_HTTP_PORT:-8080}"
+prop_replace 'nifi.web.http.port'               "${NIFI_WEB_HTTP_PORT:-9090}"
 prop_replace 'nifi.web.http.host'               "${NIFI_WEB_HTTP_HOST:-$HOSTNAME}"
 prop_replace 'nifi.remote.input.host'           "${NIFI_REMOTE_INPUT_HOST:-$HOSTNAME}"
 prop_replace 'nifi.remote.input.socket.port'    "${NIFI_REMOTE_INPUT_SOCKET_PORT:-10000}"
