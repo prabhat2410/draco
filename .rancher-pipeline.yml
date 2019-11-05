@@ -6,7 +6,7 @@ stages:
       buildContext: .
       tag: draco-devops-img
       pushRemote: true
-      registry: csp2-centos-1:5000
+      registry: registry:5000
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
