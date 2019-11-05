@@ -6,7 +6,7 @@ stages:
       buildContext: .
       tag: draco-devops
       pushRemote: true
-      registry: 192.168.100.178:5000
+      registry: 192.168.100.176:5000
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
