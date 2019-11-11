@@ -4,9 +4,9 @@ stages:
   - publishImageConfig:
       dockerfilePath: nifi-ngsi-resources/docker/Dockerfile
       buildContext: .
-      tag: draco-devops-img
+      tag: draco-devops-image
       pushRemote: true
-      registry: registry:5000
+      registry: 192.168.100.176:5000
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
