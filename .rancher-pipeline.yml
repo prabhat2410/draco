@@ -3,8 +3,16 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+    when:
+      event:
+        include:
+        - pull_request
+        - push
+        - tag
 timeout: 60
-branch: {}
+branch:
+  include:
+  - master
 notification:
   recipients:
   - recipient: aman.kumar1@india.nec.com
