@@ -10,9 +10,7 @@ stages:
         - push
         - tag
 timeout: 60
-branch:
-  include:
-  - master
+branch: {}
 notification:
   recipients:
   - recipient: aman.kumar1@india.nec.com
