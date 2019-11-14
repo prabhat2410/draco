@@ -3,12 +3,15 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+    envFrom:
+    - sourceName: p-bvfxs-1921681001765000
+      sourceKey: username
+      targetKey: abc
     when:
       event:
         include:
         - pull_request
         - push
-        - tag
 timeout: 60
 branch: {}
 notification:
