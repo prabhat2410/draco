@@ -1,17 +1,16 @@
 stages:
+- name: build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: nifi-ngsi-resources/docker/Dockerfile
+      buildContext: .
+      tag: fiware-draco
+      pushRemote: true
+      registry: 192.168.100.176:5000
 - name: deploy
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
-    envFrom:
-    - sourceName: p-bvfxs-1921681001765000
-      sourceKey: username
-      targetKey: abc
-    when:
-      event:
-        include:
-        - pull_request
-        - push
 timeout: 60
 branch: {}
 notification:
