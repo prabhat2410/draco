@@ -21,6 +21,12 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+    when:
+      event:
+        include:
+        - push
+        - pull_request
+        - tag
 timeout: 60
 branch: {}
 notification:
