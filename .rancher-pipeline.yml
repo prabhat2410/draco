@@ -12,7 +12,9 @@ stages:
   - applyYamlConfig:
       path: ./deployment.yaml
 timeout: 60
-branch: {}
+branch:
+  include:
+  - master
 notification:
   recipients:
   - recipient: aman.kumar1@india.nec.com
