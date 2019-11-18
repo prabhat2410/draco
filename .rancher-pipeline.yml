@@ -14,7 +14,7 @@ stages:
     when:
       branch:
         include:
-        - ' master'
+        - master
       event:
         include:
         - push
@@ -30,7 +30,9 @@ stages:
         - pull_request
         - tag
 timeout: 60
-branch: {}
+branch:
+  include:
+  - master
 notification:
   recipients:
   - recipient: aman.kumar1@india.nec.com
