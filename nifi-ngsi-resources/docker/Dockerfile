@@ -74,7 +74,7 @@ COPY /nifi-ngsi-resources/docker/templates/ ${NIFI_HOME}/conf/templates/
 RUN echo "#!/bin/sh\n" > $NIFI_HOME/bin/nifi-env.sh
 
 # Web HTTP(s) & Socket Site-to-Site Ports
-EXPOSE 8080 9090 8443 10000 8000 7777
+EXPOSE 8080 9090 8443 10000 8000 3333
 
 WORKDIR ${NIFI_HOME}
 
