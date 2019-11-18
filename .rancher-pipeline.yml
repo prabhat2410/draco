@@ -13,9 +13,7 @@ stages:
       PLUGIN_STORAGE_PATH: /var/lib/docker2
     when:
       branch: {}
-      event:
-        include:
-        - push
+      event: {}
 - name: deploy
   steps:
   - applyYamlConfig:
@@ -27,9 +25,7 @@ stages:
         - pull_request
         - tag
 timeout: 60
-branch:
-  include:
-  - master
+branch: {}
 notification:
   recipients:
   - recipient: aman.kumar1@india.nec.com
