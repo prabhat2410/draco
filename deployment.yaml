@@ -11,7 +11,7 @@ spec:
    spec:
      containers:
      - name: draconifi
-       image: csp2-centos-1:5000/fiware-draco
+       image: csp2-centos-1:5000/draco-devops-image-new
        ports:
        - containerPort: 9090
        - containerPort: 5050
