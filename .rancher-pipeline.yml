@@ -24,7 +24,7 @@ timeout: 60
 branch: {}
 notification:
   recipients:
-  - recipient: aman.kumar1@india.nec.com
+  - recipient: prabhat.upadhyay@india.nec.com
     notifier: c-h8ztd:n-kgmm2
   - recipient: Ashima.Aggarwal@india.nec.com
     notifier: c-h8ztd:n-8x5gc
