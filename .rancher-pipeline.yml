@@ -12,12 +12,19 @@ stages:
       PLUGIN_INSECURE: "true"
       PLUGIN_STORAGE_PATH: /var/lib/docker2
     when:
-      branch: {}
-      event: {}
+      branch:
+        include:
+        - master
+      event:
+        include:
+        - pull_request
+        - push
 - name: deploy
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+    env:
+      NIFI_WEB_HTTP_PORT: "7892"
     when:
       event: {}
 timeout: 60
@@ -27,8 +34,6 @@ branch:
 notification:
   recipients:
   - recipient: prabhat.upadhyay@india.nec.com
-    notifier: c-h8ztd:n-kgmm2
-  - recipient: Ashima.Aggarwal@india.nec.com
     notifier: c-h8ztd:n-8x5gc
   condition:
   - Success
