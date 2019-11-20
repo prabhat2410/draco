@@ -2437,9 +2437,7 @@ stages:
           </hashTree>
         </jmeterTestPlan>
 timeout: 60
-branch:
-  include:
-  - master
+branch: {}
 notification:
   recipients:
   - recipient: prabhat.upadhyay@india.nec.com
