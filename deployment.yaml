@@ -29,9 +29,9 @@ spec:
   ports:
     - port: 9090
       nodePort: 31333
-      name: http
+      name: data
     - port: 5050
       nodePort: 31344
-      name: data
+      name: http
   selector:
     name: draco
