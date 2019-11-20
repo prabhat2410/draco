@@ -23,6 +23,8 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+    env:
+      NIFI_WEB_HTTP_PORT: "7892"
     when:
       event: {}
 timeout: 60
