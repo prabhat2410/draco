@@ -30,7 +30,6 @@ spec:
     - port: 9090
       nodePort: 31333
       name: http
-  ports:
     - port: 5050
       nodePort: 31344
       name: data
