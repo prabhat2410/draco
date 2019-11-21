@@ -25,7 +25,7 @@ stages:
 timeout: 60
 branch:
   include:
-  - '*'
+  - master
 notification:
   recipients:
   - recipient: prabhat.upadhyay@india.nec.com
