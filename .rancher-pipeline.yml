@@ -12,12 +12,8 @@ stages:
       PLUGIN_INSECURE: "true"
       PLUGIN_STORAGE_PATH: /var/lib/docker2
     when:
-      branch:
-        include:
-        - '*'
-      event:
-        include:
-        - push
+      branch: {}
+      event: {}
 - name: deploy
   steps:
   - applyYamlConfig:
@@ -27,10 +23,12 @@ stages:
     when:
       event: {}
 timeout: 60
-branch: {}
+branch:
+  include:
+  - '*'
 notification:
   recipients:
-  - recipient: Ashima.Aggarwal@india.nec.com
+  - recipient: prabhat.upadhyay@india.nec.com
     notifier: c-h8ztd:n-8x5gc
   condition:
   - Success
