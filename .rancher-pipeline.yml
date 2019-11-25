@@ -7,10 +7,6 @@ stages:
       tag: draco-devops-image-new
       pushRemote: true
       registry: 192.168.100.176:5000
-    env:
-      PLUGIN_DEBUG: "true"
-      PLUGIN_INSECURE: "true"
-      PLUGIN_STORAGE_PATH: /var/lib/docker2
     when:
       branch:
         include:
