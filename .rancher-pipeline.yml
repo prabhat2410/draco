@@ -23,8 +23,10 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
-    env:
-      NIFI_WEB_HTTP_PORT: "7892"
+    envFrom:	
+    - sourceName: p-bvfxs-1921681001765000	
+      sourceKey: username	
+      targetKey: abc
     when:
       event: {}
 timeout: 60
