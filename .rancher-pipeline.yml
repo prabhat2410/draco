@@ -24,7 +24,7 @@ stages:
   - applyYamlConfig:
       path: ./deployment.yaml
     envFrom:
-    - sourceName: p-bvfxs-1921681001765000
+    - sourceName: fiware-1921681001765000
       sourceKey: username
       targetKey: abc
     when:
