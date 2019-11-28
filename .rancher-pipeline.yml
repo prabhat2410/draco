@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: nifi-ngsi-resources/docker/Dockerfile
       buildContext: .
-      tag: draco-devops-image-new
+      tag: draco-devops-image-new-test
       pushRemote: true
       registry: 192.168.100.176:5000
     env:
@@ -23,9 +23,9 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
-    envFrom:	
-    - sourceName: fiware	
-      sourceKey: username	
+    envFrom:
+    - sourceName: fiware
+      sourceKey: username
       targetKey: abc
     when:
       event: {}
