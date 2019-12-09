@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: nifi-ngsi-resources/docker/Dockerfile
       buildContext: .
-      tag: draco-devops-image-new-test
+      tag: draco-devops-image-new-test:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
       registry: 192.168.100.176:5000
     env:
@@ -12,13 +12,8 @@ stages:
       PLUGIN_INSECURE: "true"
       PLUGIN_STORAGE_PATH: /var/lib/docker2
     when:
-      branch:
-        include:
-        - master
-      event:
-        include:
-        - pull_request
-        - push
+      branch: {}
+      event: {}
 - name: deploy
   steps:
   - applyYamlConfig:
@@ -40,6 +35,10 @@ stages:
         \"Dir = ${dir}\"\n\npod_name=`kubectl --kubeconfig=config-176 get pods -n
         updateandrollback |grep \"api-test\" |cut -d \" \" -f1|head -n1`\n\necho \"Pod
         anme = ${pod_name}\"\n\n\nEOF\n"
+    when:
+      event:
+        include:
+        - tag
 timeout: 60
 branch:
   include:
