@@ -28,14 +28,20 @@ stages:
       sourceKey: username
       targetKey: abc
     when:
-      event: {}
+      branch:
+        include:
+        - master
+      event:
+        include:
+        - pull_request
+        - push
 timeout: 60
 branch:
   include:
   - master
 notification:
   recipients:
-  - recipient: prabhat.upadhyay@india.nec.com
+  - recipient: Ashima.Aggarwal@india.nec.com
     notifier: c-h8ztd:n-8x5gc
   condition:
   - Success
