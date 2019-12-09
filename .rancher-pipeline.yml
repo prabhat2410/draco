@@ -23,10 +23,6 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
-    envFrom:
-    - sourceName: fiware-1921681001765000
-      sourceKey: username
-      targetKey: abc
     when:
       branch:
         include:
