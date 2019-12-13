@@ -4,8 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: nifi-ngsi-resources/docker/Dockerfile
       buildContext: .
-      tag: draco-devops-image-new-test:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: true
+      tag: testing-draco:${CICD_EXECUTION_SEQUENCE}
       registry: 192.168.100.176:5000
     env:
       PLUGIN_DEBUG: "true"
@@ -19,26 +18,8 @@ stages:
   - applyYamlConfig:
       path: ./deployment.yaml
     when:
-      branch:
-        include:
-        - master
-      event:
-        include:
-        - pull_request
-        - push
-- name: test
-  steps:
-  - runScriptConfig:
-      image: python:latest
-      shellScript: "apt-get update\napt-get install sshpass \n\n\n\n\n\n\n\n\n\nsshpass
-        -p mehant ssh -tt -o StrictHostKeyChecking=no mehant@192.168.100.178 << EOF\n\n\n\ndir=`pwd`\n\necho
-        \"Dir = ${dir}\"\n\npod_name=`kubectl --kubeconfig=config-176 get pods -n
-        updateandrollback |grep \"api-test\" |cut -d \" \" -f1|head -n1`\n\necho \"Pod
-        anme = ${pod_name}\"\n\n\nEOF\n"
-    when:
-      event:
-        include:
-        - tag
+      branch: {}
+      event: {}
 timeout: 60
 branch:
   include:
