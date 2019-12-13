@@ -2,9 +2,11 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: draco
-  namespace: fiware  
+  name: printig variable
+  debug:
+    var: CICD_EXECUTION_SEQUENCE
 spec:
-  replicas: 3
+  replicas: 1
   template:
    metadata:
      labels:
@@ -12,7 +14,7 @@ spec:
    spec:
      containers:
      - name: draconifi
-       image: csp2-centos-1:5000/draco-devops-image-new
+       image: 10.0.8.59:5000/testing-draco:$CICD_EXECUTION_SEQUENCE
        ports:
        - containerPort: 9090
        - containerPort: 5050
