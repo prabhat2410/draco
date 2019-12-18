@@ -24,11 +24,4 @@ timeout: 60
 branch:
   include:
   - master
-notification:
-  recipients:
-  - recipient: Ashima.Aggarwal@india.nec.com
-    notifier: c-h8ztd:n-8x5gc
-  condition:
-  - Success
-  - Changed
-  - Failed
+notification: {}
