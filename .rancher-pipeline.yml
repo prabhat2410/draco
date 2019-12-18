@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: nifi-ngsi-resources/docker/Dockerfile
       buildContext: .
-      tag: testing-draco:${CICD_EXECUTION_SEQUENCE}
+      tag: testing-nifi:${CICD_EXECUTION_SEQUENCE}
       registry: 192.168.100.176:5000
     env:
       PLUGIN_DEBUG: "true"
